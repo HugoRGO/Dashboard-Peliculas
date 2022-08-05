@@ -19,7 +19,6 @@ btnAnterior.addEventListener('click', () => {
 const cargarPelis = async () => {
     try {
         const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=26f709e6e4af83dacd385717505003ba&language=es-MX&page=${pagina}`);
-        console.log(respuesta);
 
         if (respuesta.status === 200) {
             const datosRes = await respuesta.json();
@@ -27,10 +26,9 @@ const cargarPelis = async () => {
             let peliculasTitulo = '';
             datosRes.results.forEach(pelicula => {
                 peliculasTitulo += `
-                <div class="pelicula"> 
-                    <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path} " 
-                    <h3 class="titulo">${pelicula.title}</h3>
-                    <h3 class="titulo">${pelicula.vote_average}</h3>
+                <div class="pelicula card text-white bg-dark bg-gradient"> 
+                    <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}" > 
+                    <h3 class="titulo mb-2 mx-2 fs-5">${pelicula.title}</h3>
                 </div>
                 `
             });
@@ -46,8 +44,6 @@ const cargarPelis = async () => {
         }
 
     } catch(error) {
-
-        console.log(error);
 
     }
 }
