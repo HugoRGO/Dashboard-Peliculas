@@ -27,7 +27,6 @@ body {
 
 .contenedor .pelicula .poster {
 	width: 100%;
-	height: 20rem;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
@@ -59,5 +58,5 @@ body {
 }
 
 .paginacion button:hover {
-	background: #137c4e;
+	background: #0c0816;
 }
