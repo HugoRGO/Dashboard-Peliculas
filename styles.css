@@ -27,7 +27,7 @@ body {
 
 .contenedor .pelicula .poster {
 	width: 100%;
-	height: 20;
+	height: 20rem;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }

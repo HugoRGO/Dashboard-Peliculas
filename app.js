@@ -26,10 +26,10 @@ const cargarPelis = async () => {
             let peliculasTitulo = '';
             datosRes.results.forEach(pelicula => {
                 peliculasTitulo += `
-                <div class="pelicula card text-white bg-dark bg-gradient"> 
-                    <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}" > 
+                <div class="pelicula card text-white bg-dark bg-gradient container-fluid justify-content-center align-items-center"> 
+                    <img class="poster mt-2" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}" > 
                     <h3 class="titulo mb-2 mx-2 fs-5">${pelicula.title}</h3>
-                    <h6 class="titulo mb-2 mx-2 fs-5 fw-0">${pelicula.release_date}</h6>
+                    <h6 class="m-2 mx-2 fs-6 fw-0">${pelicula.release_date}</h6>
                 </div>
                 `
             });
