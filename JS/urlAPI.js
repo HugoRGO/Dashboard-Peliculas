@@ -1,0 +1,1 @@
+export const urlAPI = `https://api.themoviedb.org/3/movie/popular?api_key=26f709e6e4af83dacd385717505003ba&language=es-MX&page=${pagina}`;

@@ -1,9 +1,10 @@
+import { urlAPI } from "./urlAPI.js";
 
 let calificacion = [];
 let nombrePeli = [];
 
 const apiData = async () => {
-    const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=26f709e6e4af83dacd385717505003ba&language=es-MX&page=${pagina}`)
+    const response = await fetch(urlAPI)
     const datapoints = await response.json()
     console.log(datapoints);
 
